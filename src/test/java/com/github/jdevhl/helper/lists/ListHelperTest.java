@@ -1,4 +1,4 @@
-package com.github.jdevhl.lists;
+package com.github.jdevhl.helper.lists;
 
 import org.junit.jupiter.api.Test;
 
