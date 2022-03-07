@@ -1,4 +1,4 @@
-package com.github.jdevhl.parser;
+package com.github.jdevhl.parser.dto;
 
 import lombok.Getter;
 import lombok.Setter;
