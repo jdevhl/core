@@ -7,11 +7,14 @@ import static java.util.Comparator.comparing;
 public class EasyList {
 
     public static boolean isEmpty(List<?> list) {
-        return !isNotEmpty(list);
+        if (list == null) {
+            return true;
+        }
+        return list.size() == 0;
     }
 
     public static boolean isNotEmpty(List<?> list) {
-        return list != null && list.size() > 0;
+        return !isEmpty(list);
     }
 
     public static <T> T getFirst(List<T> list) {
