@@ -1,6 +1,6 @@
 package com.github.jdevhl.parser;
 
-import com.github.jdevhl.parser.dto.Person;
+import com.github.jdevhl.common.dto.Person;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

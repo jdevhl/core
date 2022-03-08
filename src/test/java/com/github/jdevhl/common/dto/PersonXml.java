@@ -1,4 +1,4 @@
-package com.github.jdevhl.parser.dto;
+package com.github.jdevhl.common.dto;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
