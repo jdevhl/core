@@ -1,4 +1,4 @@
-package com.github.jdevhl.util.integer;
+package com.github.jdevhl.lang;
 
 import lombok.extern.slf4j.Slf4j;
 

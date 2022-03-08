@@ -1,4 +1,4 @@
-package com.github.jdevhl.util.string;
+package com.github.jdevhl.lang;
 
 public class EasyString {
 

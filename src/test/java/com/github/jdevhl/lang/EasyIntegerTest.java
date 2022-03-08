@@ -1,4 +1,4 @@
-package com.github.jdevhl.util.integer;
+package com.github.jdevhl.lang;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package com.github.jdevhl.util.list;
+package com.github.jdevhl.util;
 
 import java.util.List;
 
