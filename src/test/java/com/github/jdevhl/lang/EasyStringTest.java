@@ -19,4 +19,10 @@ class EasyStringTest {
         assertEquals(false, EasyString.isNotEmpty(""));
         assertEquals(true, EasyString.isNotEmpty("not Empty"));
     }
+
+    @Test
+    public void isNumberTest() {
+        assertEquals(true, EasyString.isNumber("1"));
+        assertEquals(false, EasyString.isNumber("1a"));
+    }
 }
