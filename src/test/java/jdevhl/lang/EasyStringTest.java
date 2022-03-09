@@ -22,6 +22,24 @@ class EasyStringTest {
     }
 
     @Test
+    public void lowerCaseTest() {
+        String upperString = "HELLO this is a UPPER String";
+        assertEquals("hello this is a upper string", EasyString.lowerCase(upperString));
+    }
+
+    @Test
+    public void firstUpperCaseTest() {
+        String upperString = "HELLO";
+        assertEquals("Hello", EasyString.firstUpperCase(upperString));
+
+        String upperString2 = "h";
+        assertEquals("H", EasyString.firstUpperCase(upperString2));
+
+        String upperString3 = "he";
+        assertEquals("He", EasyString.firstUpperCase(upperString3));
+    }
+
+    @Test
     public void isNumberTest() {
         assertEquals(true, EasyString.isNumber("1"));
         assertEquals(false, EasyString.isNumber("1a"));
