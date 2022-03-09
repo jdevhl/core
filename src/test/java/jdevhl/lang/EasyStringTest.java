@@ -1,6 +1,5 @@
 package jdevhl.lang;
 
-import jdevhl.lang.EasyString;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,6 +10,7 @@ class EasyStringTest {
     public void isEmptyTest() {
         assertEquals(true, EasyString.isEmpty(null));
         assertEquals(true, EasyString.isEmpty(""));
+        assertEquals(true, EasyString.isEmpty("   "));
         assertEquals(false, EasyString.isEmpty("not Empty"));
     }
 
