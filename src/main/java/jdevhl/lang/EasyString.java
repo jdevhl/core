@@ -8,7 +8,7 @@ public class EasyString {
         if (value == null) {
             return true;
         }
-        return value.length() == 0;
+        return value.trim().length() == 0;
     }
 
     public static boolean isNotEmpty(String value) {
@@ -16,7 +16,7 @@ public class EasyString {
     }
 
     public static boolean isNumber(String value) {
-        if (value == null) {
+        if (isEmpty(value)) {
             return false;
         }
         return value.matches(REGEX_STRING_NUMBER);
