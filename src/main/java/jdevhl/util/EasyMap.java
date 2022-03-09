@@ -8,7 +8,7 @@ public class EasyMap {
 
     public static boolean isEmpty(Map<?, ?> value) {
         if (value == null) {
-            return false;
+            return true;
         }
         return value.size() == 0;
     }

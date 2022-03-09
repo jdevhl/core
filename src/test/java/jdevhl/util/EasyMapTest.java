@@ -7,10 +7,27 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 class EasyMapTest {
+
+    @Test
+    public void isEmptyTest() {
+        Map<String, Integer> map = new HashMap<>();
+        assertTrue(EasyMap.isEmpty(map));
+        assertTrue(EasyMap.isEmpty(null));
+        map.put("first", 1);
+        assertFalse(EasyMap.isEmpty(map));
+    }
+
+    @Test
+    public void isNotEmptyTest() {
+        Map<String, Integer> map = new HashMap<>();
+        assertFalse(EasyMap.isNotEmpty(map));
+        assertFalse(EasyMap.isNotEmpty(null));
+        map.put("first", 1);
+        assertTrue(EasyMap.isNotEmpty(map));
+    }
 
     @Test
     public void sortMapIntegerTest() {
