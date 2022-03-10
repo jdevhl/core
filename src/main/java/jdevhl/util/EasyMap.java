@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
  * Utility class for use of Maps.
  *
  * @author Oscar Montes
- * @see java.util.Map;
+ * @see java.util.Map
  * @since 1.0.0
  */
 public class EasyMap {

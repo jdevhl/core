@@ -13,7 +13,7 @@ import java.util.Map;
  * Utility class for use of Dates.
  *
  * @author Oscar Montes
- * @see java.util.Date;
+ * @see java.util.Date
  * @since 1.0.0
  */
 public class EasyDate {

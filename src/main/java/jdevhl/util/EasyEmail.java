@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
  * Utility class for use of Email.
  *
  * @author Oscar Montes
- * @see java.util.Date;
+ * @see java.util.Date
  * @since 1.0.0
  */
 public class EasyEmail {

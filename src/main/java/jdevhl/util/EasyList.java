@@ -8,7 +8,7 @@ import static java.util.Comparator.comparing;
  * Utility class for use of Lists.
  *
  * @author Oscar Montes
- * @see java.util.List;
+ * @see java.util.List
  * @since 1.0.0
  */
 public class EasyList {

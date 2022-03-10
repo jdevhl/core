@@ -15,7 +15,7 @@ import java.util.stream.Stream;
  * Utility class for use of Files.
  *
  * @author Oscar Montes
- * @see java.nio.file.Files;
+ * @see java.nio.file.Files
  * @since 1.0.0
  */
 public class EasyFile {
