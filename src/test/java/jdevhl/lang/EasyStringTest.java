@@ -42,6 +42,8 @@ class EasyStringTest {
     @Test
     public void isNumberTest() {
         assertTrue(EasyString.isNumber("1"));
+        assertTrue(EasyString.isNumber("1.2"));
+        assertTrue(EasyString.isNumber("1,2"));
         assertFalse(EasyString.isNumber("1a"));
     }
 

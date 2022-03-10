@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 public class EasyString {
 
     private static final String REGEX_STRING_NUMBER = "\\d+";
+    public static final String REMOVE_POINT_COMMA = "[\\.\\,]";
 
     public static boolean isEmpty(String value) {
         if (value == null) {
@@ -52,6 +53,7 @@ public class EasyString {
         if (isEmpty(value)) {
             return false;
         }
+        value = value.replaceFirst(REMOVE_POINT_COMMA, "");
         return value.matches(REGEX_STRING_NUMBER);
     }
 
