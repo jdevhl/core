@@ -13,7 +13,8 @@ import java.util.regex.Pattern;
 public class EasyString {
 
     private static final String REGEX_STRING_NUMBER = "\\d+";
-    public static final String REMOVE_POINT_COMMA = "[\\.\\,]";
+    private static final String REMOVE_POINT_COMMA = "[\\.\\,]";
+    private static final String REGEX_IS_DECIMAL = "^\\d+\\.\\d+";
 
     public static boolean isEmpty(String value) {
         if (value == null) {
@@ -55,6 +56,13 @@ public class EasyString {
         }
         value = value.replaceFirst(REMOVE_POINT_COMMA, "");
         return value.matches(REGEX_STRING_NUMBER);
+    }
+
+    public static boolean isDecimalNumber(String value) {
+        if (isEmpty(value)) {
+            return false;
+        }
+        return value.matches(REGEX_IS_DECIMAL);
     }
 
     public static String normalize(String value) {

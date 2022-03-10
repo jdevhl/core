@@ -48,6 +48,14 @@ class EasyStringTest {
     }
 
     @Test
+    public void isDecimalNumberTest() {
+        assertFalse(EasyString.isDecimalNumber("1"));
+        assertFalse(EasyString.isDecimalNumber("100"));
+        assertTrue(EasyString.isDecimalNumber("1.0"));
+        assertTrue(EasyString.isDecimalNumber("10.5"));
+    }
+
+    @Test
     public void normalizeTest() {
         String normalized = "aeiou";
         assertEquals(normalized, EasyString.normalize("áéíóú"));
