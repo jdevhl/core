@@ -2,7 +2,7 @@ package jdevhl.lang;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class EasyStringTest {
 
@@ -41,7 +41,15 @@ class EasyStringTest {
 
     @Test
     public void isNumberTest() {
-        assertEquals(true, EasyString.isNumber("1"));
-        assertEquals(false, EasyString.isNumber("1a"));
+        assertTrue(EasyString.isNumber("1"));
+        assertFalse(EasyString.isNumber("1a"));
+    }
+
+    @Test
+    public void normalizeTest() {
+        String normalized = "aeiou";
+        assertEquals(normalized, EasyString.normalize("áéíóú"));
+        assertEquals(normalized, EasyString.normalize("äëïöü"));
+        assertEquals(normalized, EasyString.normalize("âêîôû"));
     }
 }

@@ -1,5 +1,8 @@
 package jdevhl.lang;
 
+import java.text.Normalizer;
+import java.util.regex.Pattern;
+
 /**
  * Utility class for use of String.
  *
@@ -50,5 +53,11 @@ public class EasyString {
             return false;
         }
         return value.matches(REGEX_STRING_NUMBER);
+    }
+
+    public static String normalize(String word) {
+        String wordNormalized = Normalizer.normalize(word, Normalizer.Form.NFD);
+        Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+        return pattern.matcher(wordNormalized).replaceAll("");
     }
 }
