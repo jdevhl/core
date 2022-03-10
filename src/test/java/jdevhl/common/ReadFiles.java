@@ -17,4 +17,8 @@ public class ReadFiles {
         return fileString;
     }
 
+    public static String getPath(String file) {
+        return Constants.BASE_TEST_RESOURCES.resolve(Paths.get(file)).toString();
+    }
+
 }
