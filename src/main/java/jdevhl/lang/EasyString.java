@@ -55,8 +55,8 @@ public class EasyString {
         return value.matches(REGEX_STRING_NUMBER);
     }
 
-    public static String normalize(String word) {
-        String wordNormalized = Normalizer.normalize(word, Normalizer.Form.NFD);
+    public static String normalize(String value) {
+        String wordNormalized = Normalizer.normalize(value, Normalizer.Form.NFD);
         Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
         return pattern.matcher(wordNormalized).replaceAll("");
     }
