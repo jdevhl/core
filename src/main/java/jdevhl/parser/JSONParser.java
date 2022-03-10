@@ -5,6 +5,12 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Utility class for use of Json.
+ *
+ * @author Oscar Montes
+ * @since 1.0.0
+ */
 @Slf4j
 public class JSONParser {
 

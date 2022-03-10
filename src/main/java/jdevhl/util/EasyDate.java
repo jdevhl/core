@@ -9,12 +9,19 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+/**
+ * Utility class for use of Dates.
+ *
+ * @author Oscar Montes
+ * @see java.util.Date;
+ * @since 1.0.0
+ */
 public class EasyDate {
 
     public static final String HYPHEN_YYYY_MM_DD = "yyyy-MM-dd";
     public static final String HYPHEN_DD_MM_YYYY = "dd-MM-yyyy";
     public static final String SLASH_DD_MM_YYYY = "dd/MM/yyyy";
-    
+
     /**
      * Transform String to Date with format and locale
      *

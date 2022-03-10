@@ -1,5 +1,12 @@
 package jdevhl.lang;
 
+/**
+ * Utility class for use of String.
+ *
+ * @author Oscar Montes
+ * @see java.lang.String
+ * @since 1.0.0
+ */
 public class EasyString {
 
     private static final String REGEX_STRING_NUMBER = "\\d+";

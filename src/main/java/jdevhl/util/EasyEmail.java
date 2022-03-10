@@ -3,6 +3,13 @@ package jdevhl.util;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Utility class for use of Email.
+ *
+ * @author Oscar Montes
+ * @see java.util.Date;
+ * @since 1.0.0
+ */
 public class EasyEmail {
 
     private static final String EMAIL_VALID_PATTERN = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$";

@@ -6,6 +6,13 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.io.StringReader;
 
+/**
+ * Utility class for use of JAXB.
+ *
+ * @author Oscar Montes
+ * @see jakarta.xml.bind.JAXBContext;
+ * @since 1.0.0
+ */
 @Slf4j
 public class JAXBParser {
 

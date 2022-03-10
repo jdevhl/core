@@ -11,6 +11,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * Utility class for use of Files.
+ *
+ * @author Oscar Montes
+ * @see java.nio.file.Files;
+ * @since 1.0.0
+ */
 public class EasyFile {
 
     public static boolean isFile(Path path) {
