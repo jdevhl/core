@@ -1,5 +1,7 @@
 package jdevhl.util;
 
+import jdevhl.lang.EasyObject;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -37,15 +39,12 @@ public class EasyMap {
 
     private static void checkMapComparableValues(Map<?, ?> map) {
         final Object key = map.keySet().stream().findFirst().get();
-        if (!isComparable(key)) {
+        if (!EasyObject.isComparable(key)) {
             throw new IllegalArgumentException("Key must be Comparable");
         }
-        if (!isComparable(map.get(key))) {
+        if (!EasyObject.isComparable(map.get(key))) {
             throw new IllegalArgumentException("Value must be Comparable");
         }
     }
 
-    private static boolean isComparable(Object key) {
-        return key instanceof Comparable;
-    }
 }
