@@ -2,6 +2,7 @@ package jdevhl.util;
 
 import jdevhl.lang.EasyObject;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,6 +16,9 @@ import static java.util.Comparator.comparing;
  * @since 1.0.0
  */
 public class EasyList {
+
+    public static final String ORDER_ASC = "Asc";
+    public static final String ORDER_DESC = "Desc";
 
     public static boolean isEmpty(List<?> list) {
         if (list == null) {
@@ -37,11 +41,25 @@ public class EasyList {
     }
 
     public static List<?> sort(List<?> list) {
+        return sort(list, ORDER_ASC);
+    }
+
+    public static List<?> sort(List<?> list, String order) {
         if (isEmpty(list)) {
             return list;
         }
+        if (EasyObject.isNull(order)) {
+            return sort(list);
+        }
         checkListComparableValues(list);
-        return list.stream().sorted().collect(Collectors.toList());
+        if (ORDER_ASC.equals(order)) {
+            return list.stream().sorted().collect(Collectors.toList());
+        } else if (ORDER_DESC.equals(order)) {
+            Collections.sort(list, Collections.reverseOrder());
+            return list;
+        } else {
+            throw new IllegalArgumentException("Order must be ASC or DESC");
+        }
     }
 
     public static String getBiggestString(List<String> list) {

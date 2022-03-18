@@ -1,5 +1,6 @@
 package jdevhl.util;
 
+import jdevhl.common.dto.Person;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -7,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class EasyListTest {
 
@@ -49,6 +51,31 @@ class EasyListTest {
     }
 
     @Test
+    public void sortStringAscTest() {
+        String[] names = {"Andrés", "Fernando", "Jesús", "Joaquín", "Juan", "Óscar"};
+        List<String> listStr = Arrays.asList("Juan", "Joaquín", "Andrés", "Fernando", "Jesús", "Óscar");
+        List<String> listSorted = (List<String>) EasyList.sort(listStr, EasyList.ORDER_ASC);
+        int cont = 0;
+        for (String name : listSorted) {
+            assertEquals(names[cont], name);
+            cont++;
+        }
+    }
+
+
+    @Test
+    public void sortStringDescTest() {
+        String[] names = {"Óscar", "Juan", "Joaquín", "Jesús", "Fernando", "Andrés"};
+        List<String> listStr = Arrays.asList("Juan", "Joaquín", "Andrés", "Fernando", "Jesús", "Óscar");
+        List<String> listSorted = (List<String>) EasyList.sort(listStr, EasyList.ORDER_DESC);
+        int cont = 0;
+        for (String name : listSorted) {
+            assertEquals(names[cont], name);
+            cont++;
+        }
+    }
+
+    @Test
     public void sortIntegerTest() {
         Integer[] numbers = {1, 2, 5, 10, 21, 100};
         List<Integer> listInt = Arrays.asList(100, 10, 5, 21, 2, 1);
@@ -78,5 +105,23 @@ class EasyListTest {
         list.add(3);
         list.add(9);
         assertEquals(10, EasyList.getBiggestInteger(list));
+    }
+
+    @Test
+    public void sortListIllegalArgumentExceptionTest() {
+        List<Person> listUnsorted = new ArrayList<>();
+        listUnsorted.add(new Person());
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            EasyList.sort(listUnsorted);
+        });
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            EasyList.sort(listUnsorted, EasyList.ORDER_DESC);
+        });
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            EasyList.sort(listUnsorted, EasyList.ORDER_ASC);
+        });
     }
 }
