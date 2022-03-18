@@ -13,7 +13,7 @@ It's in maven central.
     <dependency>
         <groupId>io.github.jdevhl</groupId>
         <artifactId>jdevhl-core</artifactId>
-        <version>0.0.2</version>
+        <version>0.0.3</version>
     </dependency>
 
 ## License
