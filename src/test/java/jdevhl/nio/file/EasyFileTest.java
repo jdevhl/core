@@ -16,7 +16,6 @@ class EasyFileTest {
     public void getFilesFromDirTest() throws Exception {
         List<String> list = EasyFile.getFileNames(resourcesPath.concat("//dir"));
         assertEquals(3, list.size());
-        assertEquals("src/test/resources/dir/file2.txt", list.get(0));
     }
 
     @Test
