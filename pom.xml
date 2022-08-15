@@ -6,7 +6,7 @@
 
     <groupId>io.github.jdevhl</groupId>
     <artifactId>jdevhl-core</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.3.1</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>A Java library to help to developer with usefully utils (parsers, helpers, etc.).</description>
@@ -201,7 +201,7 @@
 
     <developers>
         <developer>
-            <id>jdevhl</id>
+            <id>omontes</id>
             <name>Óscar Montes</name>
             <email>jdevhl@gmail.com</email>
         </developer>
