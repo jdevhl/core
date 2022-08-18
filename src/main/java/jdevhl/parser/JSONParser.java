@@ -3,7 +3,6 @@ package jdevhl.parser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * Utility class for use of Json.
@@ -11,7 +10,6 @@ import lombok.extern.slf4j.Slf4j;
  * @author Oscar Montes
  * @since 1.0.0
  */
-@Slf4j
 public class JSONParser {
 
     private ObjectMapper objectMapper;
@@ -31,7 +29,7 @@ public class JSONParser {
         try {
             object = objectMapper.readValue(value, clazz);
         } catch (JsonProcessingException e) {
-            log.error("Error to convert to JSON Object", e);
+
         }
         return object;
     }

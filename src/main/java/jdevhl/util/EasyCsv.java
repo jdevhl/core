@@ -1,7 +1,5 @@
 package jdevhl.util;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -15,7 +13,6 @@ import java.util.List;
  * @author Oscar Montes
  * @since 1.0.0
  */
-@Slf4j
 public class EasyCsv {
 
     public static final String COMMA_SEPARATOR = ",";
@@ -35,7 +32,7 @@ public class EasyCsv {
                 list.add(text.split(separator));
             }
         } catch (IOException e) {
-            log.error("Error parsing csv {}", e.getMessage());
+
         }
         return list;
     }

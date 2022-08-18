@@ -6,7 +6,7 @@
 
     <groupId>io.github.jdevhl</groupId>
     <artifactId>jdevhl-core</artifactId>
-    <version>0.0.3.1</version>
+    <version>0.0.4</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>A Java library to help to developer with usefully utils (parsers, helpers, etc.).</description>
@@ -17,7 +17,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jaxb-core.version>3.0.2</jaxb-core.version>
         <jaxb-impl.version>3.0.2</jaxb-impl.version>
-        <lombok.version>1.18.22</lombok.version>
         <slf4j.version>1.7.36</slf4j.version>
         <jackson.version>2.13.1</jackson.version>
         <jaxb-api.version>2.1</jaxb-api.version>
@@ -37,12 +36,6 @@
 
     <dependencies>
 
-        <!-- Lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
