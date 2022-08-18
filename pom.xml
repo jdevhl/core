@@ -6,7 +6,7 @@
 
     <groupId>io.github.jdevhl</groupId>
     <artifactId>jdevhl-core</artifactId>
-    <version>0.0.3.1</version>
+    <version>0.0.4</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>A Java library to help to developer with usefully utils (parsers, helpers, etc.).</description>
@@ -15,13 +15,6 @@
     <properties>
         <module.name>com.github.jdevhl.jdevhl.core</module.name>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jaxb-core.version>3.0.2</jaxb-core.version>
-        <jaxb-impl.version>3.0.2</jaxb-impl.version>
-        <lombok.version>1.18.22</lombok.version>
-        <slf4j.version>1.7.36</slf4j.version>
-        <jackson.version>2.13.1</jackson.version>
-        <jaxb-api.version>2.1</jaxb-api.version>
-        <jaxb-runtime.version>3.0.2</jaxb-runtime.version>
         <junit.version>5.8.2</junit.version>
         <maven.javadoc.plugin.version>3.2.0</maven.javadoc.plugin.version>
         <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
@@ -36,50 +29,6 @@
     </properties>
 
     <dependencies>
-
-        <!-- Lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson.version}</version>
-        </dependency>
-        <!-- Jaxb -->
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-            <version>${jaxb-api.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
-            <artifactId>jaxb-runtime</artifactId>
-            <version>${jaxb-runtime.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-core</artifactId>
-            <version>${jaxb-core.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-impl</artifactId>
-            <version>${jaxb-impl.version}</version>
-        </dependency>
         <!-- Testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
